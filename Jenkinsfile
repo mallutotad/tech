@@ -11,7 +11,7 @@ stage('ContinousBuild')
 stage('ContinousDeployment')
    
  {
-    sh label:'', script: 'scp  /home/ubuntu/.jenkins/workspace/scrpitedpipeline/webapp/target/webapp.war    ubuntu@172.31.8.55:/var/lib/tomcat8/webapps/testapp.war'        
+    sh label:'', script: 'scp  /home/ubuntu/.jenkins/workspace/scrpitedpipeline/webapp/target/webapp.war    ubuntu@13.127.4.159:/var/lib/tomcat8/webapps/testapp.war'        
     }
 stage('ContinousTesting')
     {
@@ -21,7 +21,7 @@ stage('ContinousTesting')
 stage('ContinousDelivery')
 
  {
-    sh label:'', script: 'scp  /home/ubuntu/.jenkins/workspace/scrpitedpipeline/webapp/target/webapp.war    ubuntu@172.31.9.253:/var/lib/tomcat8/webapps/prodapp.war'
+    sh label:'', script: 'scp  /home/ubuntu/.jenkins/workspace/scrpitedpipeline/webapp/target/webapp.war    ubuntu@3.108.249.58:/var/lib/tomcat8/webapps/prodapp.war'
     }
     
 }
